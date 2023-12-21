@@ -279,5 +279,24 @@ services:
       airflow-init:
         condition: service_completed_successfully
 
+  dbt:
+    image: fishtownanalytics/dbt:latest
+    environment:
+      - DBT_PROFILE_NAME=dwh_dbt
+      - DBT_PROFILE_TYPE=postgres
+      - DBT_PROFILE_HOST=localhost
+      - DBT_PROFILE_USER=postgres
+      - DBT_PROFILE_PASSWORD=nati@postgres
+      - DBT_PROFILE_DBNAME=TrafficData
+      - DBT_PROFILE_SCHEMA=public
+      - DBT_PROFILE_THREADS=1
+      - DBT_PROFILE_TIMEOUT_SECONDS=300
+    volumes:
+      - ./dwh_dbt:/dbt
+    command: ["dbt", "run", "--project-dir", "/dbt"]
+    depends_on:
+      - postgres
+    restart: always
+    
 volumes:
   postgres-db-volume:

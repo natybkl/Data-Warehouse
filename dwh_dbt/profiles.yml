@@ -1,0 +1,12 @@
+dwh_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      user: postgres
+      password: nati@postgres
+      dbname: TrafficData
+      schema: public
+      port: 5432
