@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
+# from airflow.operators.docker_operator import DockerOperator
 from airflow.utils.dates import days_ago
 
 # Define your dbt model name and project directory
@@ -14,8 +15,8 @@ default_args = {
     'start_date': days_ago(0),  # Start immediately
     'email_on_failure': False,
     'email_on_retry': False,
-    'retries': 1,
-    'retry_delay': timedelta(minutes=5),
+    'retries': 3,
+    'retry_delay': timedelta(minutes=1),
 }
 
 # Define the DAG with its parameters

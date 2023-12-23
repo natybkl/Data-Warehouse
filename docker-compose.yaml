@@ -280,7 +280,7 @@ services:
         condition: service_completed_successfully
 
   dbt:
-    image: fishtownanalytics/dbt:latest
+    image: fishtownanalytics/dbt:0.21.0 
     environment:
       - DBT_PROFILE_NAME=dwh_dbt
       - DBT_PROFILE_TYPE=postgres
