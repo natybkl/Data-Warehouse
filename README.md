@@ -63,3 +63,8 @@ We utilize the pNEUMA dataset, a large-scale collection of naturalistic vehicle 
 ## Conclusion
 
 This project aligns with our mission to revolutionize traffic analytics, providing cities with actionable insights for smart urban planning. We invite you to explore, contribute, and leverage our data warehouse solution to make impactful decisions for a more connected and efficient future.
+
+[Read my Blog for in-depth explanation🔗](https://medium.com/@natnaelbekele142/data-warehousing-the-engine-of-business-intelligence-2dac8adeb921)
+
+[![Read my Blog for in-depth explanation](images/blog_preview.jpg)](https://medium.com/@natnaelbekele142/data-warehousing-the-engine-of-business-intelligence-2dac8adeb921)
+
