@@ -3,7 +3,7 @@ from airflow import DAG
 from airflow.operators.bash_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
 # from airflow.operators.docker_operator import DockerOperator
-from airflow.utils.dates import days_ago
+# from airflow.utils.dates import days_ago
 
 # Define your dbt model name and project directory
 dbt_model_name = '03_average_distance_by_type'
