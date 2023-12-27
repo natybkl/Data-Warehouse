@@ -1,4 +1,4 @@
-# Project README: Building a Scalable Data Warehouse for AI-Driven Traffic Analytics
+# Building a Scalable Data Warehouse for AI-Driven Traffic Analytics
 
 ## Project Overview
 
