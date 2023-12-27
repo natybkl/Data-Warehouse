@@ -4,6 +4,8 @@
 
 Welcome to our AI startup's ambitious project aimed at transforming the way traffic data is analyzed and utilized for smart city initiatives. This README will guide you through the project structure, business need, data source, and instructions for setting up the data warehouse tech stack using Airflow, dbt, PostgreSQL, and Redash.
 
+[Read the Blog for details](https://medium.com/@natnaelbekele142/data-warehousing-the-engine-of-business-intelligence-2dac8adeb921)
+
 ![Project Overview](images/project_overview.jpg)
 
 
