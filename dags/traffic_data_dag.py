@@ -2,6 +2,7 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.bash_operator import PythonOperator
 from airflow.operators.bash_operator import BashOperator
+from dags.load_csv_files import load_csv
 # from airflow.operators.docker_operator import DockerOperator
 # from airflow.utils.dates import days_ago
 
@@ -45,7 +46,7 @@ dag = DAG(
 
 task_load_data = PythonOperator(
     task_id='load_data',
-    python_callable=load_csv_to_database,
+    python_callable=load_csv,
     dag=dag,
 )
 
