@@ -20,6 +20,7 @@ Welcome to our AI startup's ambitious project aimed at transforming the way traf
 - **/test:** Contains test scripts.
 - **.gitignore:** Git configuration to exclude unnecessary files.
 - **docker-compose.yaml:** Docker Compose configuration for fully dockerized deployment.
+- **requirements.txt:** File containing the list of project dependencies.
 
 ### Business Need
 
@@ -39,32 +40,33 @@ We utilize the pNEUMA dataset, a large-scale collection of naturalistic vehicle 
 - [travia: Traffic data Visualization and Annotation tool](github.com/tud-hri/travia)
 - [pNEUMA_mastersproject: Python files to work with pNEUMA dataset](github.com/JoachimLandtmeters/pNEUMA_mastersproject)
 
-## Instructions
+## Getting Started
 
 ### Setting Up Locally
 
-1. **Fully Dockerized Deployment:**
-   - Ensure Docker is installed on your machine.
-   - Run `docker-compose up` in the project root to deploy PostgreSQL, Airflow, dbt, and Redash.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/your-username/Data-Warehouse.git
+   cd Data-Warehouse
+   
+2. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
 
-2. **DAG Setup in Airflow:**
-   - Create a DAG in Airflow for loading data files into the database.
-   - Implement separation for Production, Development, and Staging environments.
+3. **Run Airflow Services:**
+   ```bash
+   docker-compose up --build
 
-3. **Connect dbt with Data Warehouse:**
-   - Write transformation code in dbt to execute via Airflow's Bash or Python operator.
-   - Document data models thoroughly and present them using the dbt docs UI.
+4. **Access Airflow UI:**
+   - Open your browser and go to http://localhost:8080.
 
-4. **Data Quality Monitoring:**
-   - Explore additional dbt modules for data quality monitoring (e.g., great_expectations, dbt_expectations, or re-data).
+5. **Customize DAGs and dbt Models:**
+   - Adjust Airflow DAGs in the dags folder.
+   - Modify dbt models in the dwh_dbt folder based on your specific requirements and data transformations.
 
-5. **Connect Reporting Environment - Redash:**
-   - Connect Redash to the data warehouse.
-   - Create a dashboard showcasing insights derived from the data.
-
-6. **Documentation and Article:**
-   - Write comprehensive documentation for the project, including setup steps and data model details.
-   - Craft a short article describing your approach and key decisions made throughout the project.
+6. **Stop Airflow Services:**
+   ```bash
+   docker-compose down
 
 ## Conclusion
 
