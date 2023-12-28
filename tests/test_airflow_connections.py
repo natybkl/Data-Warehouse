@@ -9,7 +9,7 @@ from dags.load_csv_files import load_csv
 class TestTrafficDataDag(unittest.TestCase):
 
     def setUp(self):
-        self.dagbag = DagBag(dag_folder = os.path.abspath('../dag'))  
+        self.dagbag = DagBag(dag_folder = os.path.abspath('../dags'))  
 
     def test_traffic_data_dag(self):
         dag_id = 'traffic_data_dag'
