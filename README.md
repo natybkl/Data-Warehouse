@@ -11,9 +11,13 @@ Welcome to our AI startup's ambitious project aimed at transforming the way traf
 
 ### Project Structure
 
-- **dags:** Airflow DAG scripts for orchestrating data loading and transformation.
-- **dwh_dbt:** dbt project folder containing models for data transformation.
-- **notebooks:** Jupyter notebook files for raw CSV data processing and loading.
+- **/dags:** Airflow DAG scripts for orchestrating data loading and transformation.
+- **/dwh_dbt:** dbt project folder containing models for data transformation.
+- **/notebooks:** Jupyter notebook files for raw CSV data processing and loading.
+- **/data:** Raw CSV files used in the project.
+- **/images:** Images used in the README.
+- **/redash:** Redash project folder for visualization and reporting.
+- **/test:** Contains test scripts.
 - **.gitignore:** Git configuration to exclude unnecessary files.
 - **docker-compose.yaml:** Docker Compose configuration for fully dockerized deployment.
 
